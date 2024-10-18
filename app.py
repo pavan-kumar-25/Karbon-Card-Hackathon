@@ -3,7 +3,6 @@ import json
 from model import probe_model_5l_profit
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Set a secret key for session management
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
@@ -17,7 +16,7 @@ def upload_file():
             content = file.read()
             data = json.loads(content)
             result = probe_model_5l_profit(data["data"])
-            session['result'] = result  # Store the result in the session
+            session['result'] = result  
             return redirect(url_for('show_result'))
         else:
             return 'Invalid file. Please upload data.json'
