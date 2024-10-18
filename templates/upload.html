@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Data File</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Center content on the page */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f4f8; /* Light background color */
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Styling for the container */
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 2px solid #ddd;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF; /* Primary blue color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Data File</h1>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".json" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
